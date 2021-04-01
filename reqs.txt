@@ -1,0 +1,7 @@
+Goal: Create a chrome extention that has a pop up every time a codesmith event on calender occurs with title and link!
+
+Steps:
+
+1. make an extention
+2. figure out how to sign in and access google calender api
+
