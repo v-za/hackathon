@@ -46,6 +46,8 @@ console.log(today)
 
 
 
+let num  = "18:28";
+
 
 
 // TEST 1
@@ -53,10 +55,10 @@ const test1 = {}
 test1["summary"] = "↺ Junior Evening Standups";
 test1["description"] = "Follow the attached zoom link for today's standups";
 test1["link"] = "https://share.codesmith.io/NYjuniors"
-test1["start"] = "18:20";
+test1["start"] = num;
 test1["end"] = "18:55";
 
-days[today]["18:20"] = test1;
+days[today][num] = test1;
 
 // console.log(days[today])
 
