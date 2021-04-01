@@ -1,5 +1,4 @@
 
-
 // var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 // var req = new XMLHttpRequest();
@@ -56,9 +55,33 @@ const today = todayDay.toDateString();
 const time = todayDay.toTimeString().slice(0,5);
 console.log(time)
 console.log(today)
-console.log(days[today])
-days[today]["09:14"] = "HELLO I AM THE OBJECT!";
+//console.log(days[today])
 
+// TESTING EVENTS
+
+
+// TEST 1
+const test1 = {}
+test1["summary"] = "↺ Junior Evening Standups";
+test1["description"] = "Follow the attached zoom link for today's standups";
+test1["link"] = "https://share.codesmith.io/NYjuniors"
+test1["start"] = "13:20";
+test1["end"] = "13:12";
+
+days[today]["13:22"] = test1;
+
+console.log(days[today])
+
+const sortedTimes = Object.keys(days[today]).sort();
+console.log(sortedTimes);
+console.log("doc")
+//console.log(document)
+
+
+// chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+//   // do something with msgObj
+//   sendResponse("HELLLOOO")
+// });
 function checkingTime () {
   setInterval(()=>{
 
@@ -66,7 +89,23 @@ function checkingTime () {
     const today = todayDate.toDateString();
     const time = todayDate.toTimeString().slice(0,5);
 
+    // remove all keys that time has passed
+    if(sortedTimes[0]<time) sortedTimes.shift();
+
+    // next three times in schedule
+    const threes = sortedTimes.slice(0,3);
+
+
+    // const head = document.querySelector(".summary1");
+    // console.log(head);  
+
+    // first div
+    // document.querySelector(".summary1").innerHTML = days[today][threes[0]]["summary"];
+    // document.querySelector(".time1").innerHTML = days[today][threes[0]]["start"];
+    
+
     //console.log(time);
+
 
     if(days[today][time]){
     // console.log("hooray!");
@@ -75,16 +114,20 @@ function checkingTime () {
     // let newChild = document.createElement('p');
     // newChild.innerHTML = "IS THIS WORKING??"
     // begin.appendChild(newChild);
+    
+    const evnt = days[today][time];
+    const newLine = "\n"
 
-    if(typeof days[today][time] === 'object'){
-      alert(days[today][time]["link"])
+    const message = evnt["summary"].toUpperCase() + "\n" + "\n" + evnt["description"] + "\n" + evnt["start"] +"-"+evnt["end"] + "\n" +"\n" + "Clicl Ok to go to link: " + evnt["link"];
+    console.log(message)
+    if (confirm(message)) {
+        open(evnt["link"], "Enjoy!");
     }
-    else {
-      alert("WORKSS!!")
-    }
+
+
     
     }
-  }, 55000)
+  }, 35000)
 }
 
 checkingTime();
