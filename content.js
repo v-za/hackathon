@@ -16,9 +16,9 @@
 // req.send();
 // //req.onreadystatechange();
 
-const url = chrome.runtime.getURL("/data.json");
+//const url = runtime.getURL("/data.json");
 
-fetch(url).then((response)=> {
+fetch('https://raw.githubusercontent.com/v-za/hackathon/main/data.json').then((response)=> {
   return response.json();
 }).then((data)=> {
   //console.log(obj)
