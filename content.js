@@ -16,7 +16,7 @@
 // req.send();
 // //req.onreadystatechange();
 
-const url = runtime.getURL("/data.json");
+const url = chrome.runtime.getURL("/data.json");
 
 fetch(url).then((response)=> {
   return response.json();
