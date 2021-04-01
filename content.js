@@ -77,14 +77,14 @@ function checkingTime () {
     // begin.appendChild(newChild);
 
     if(typeof days[today][time] === 'object'){
-      alert(days[today][time][link])
+      alert(days[today][time]["link"])
     }
     else {
       alert("WORKSS!!")
     }
     
     }
-  }, 20000)
+  }, 55000)
 }
 
 checkingTime();
