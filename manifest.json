@@ -2,7 +2,7 @@
     "name": "Codesmith Calendar Popup",
     "version": "1.0",
     "description": "",
-    "manifest_version": 2,
+    "manifest_version": 3,
     "content_scripts": [
         {
             "matches": [
@@ -15,7 +15,7 @@
     ],
     "web_accessible_resources": [
         {
-          "resources": [ "data.json" ],
+          "resources": [ "/data.json" ],
           "matches": [ "https://web-accessible-resources-1.glitch.me/*" ]
         }
     ],
