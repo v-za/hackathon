@@ -15,7 +15,10 @@
 // req.open('GET', '/data.json');
 // req.send();
 // //req.onreadystatechange();
-fetch('data.json').then((response)=> {
+
+const url = runtime.getURL("/data.json");
+
+fetch(url).then((response)=> {
   return response.json();
 }).then((data)=> {
   //console.log(obj)

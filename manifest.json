@@ -13,6 +13,12 @@
             ]
         }
     ],
+    "web_accessible_resources": [
+        {
+          "resources": [ "data.json" ],
+          "matches": [ "https://web-accessible-resources-1.glitch.me/*" ]
+        }
+    ],
     "browser_action": {
         "default_popup": "index.html",
         "default_title": "Test!"
