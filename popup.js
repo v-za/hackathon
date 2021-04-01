@@ -45,27 +45,31 @@ console.log(today)
 // TESTING EVENTS
 
 
+
+
+
 // TEST 1
 const test1 = {}
 test1["summary"] = "↺ Junior Evening Standups";
 test1["description"] = "Follow the attached zoom link for today's standups";
 test1["link"] = "https://share.codesmith.io/NYjuniors"
-test1["start"] = "18:10";
+test1["start"] = "18:20";
 test1["end"] = "18:55";
 
-days[today]["18:10"] = test1;
+days[today]["18:20"] = test1;
 
 // console.log(days[today])
 
-
 const test2 = {}
-test1["summary"] = "Codesmith Social: Welcome FTRI (Optional)";
-test1["description"] = "Feel free to hangout on the Runway Zoom if you want to hang out with your cohortmates!";
-test1["link"] = "https://share.codesmith.io/NYrunway"
-test1["start"] = "20:00";
-test1["end"] = "21:00";
+test2["summary"] = "Codesmith Social: Welcome FTRI (Optional)";
+test2["description"] = "Feel free to hangout on the Runway Zoom if you want to hang out with your cohortmates!";
+test2["link"] = "https://share.codesmith.io/NYrunway"
+test2["start"] = "20:00";
+test2["end"] = "21:00";
 
 days[today]["20:00"] = test2;
+
+
 
 const sortedTimes = Object.keys(days[today]).sort();
 // console.log(sortedTimes);
