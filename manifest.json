@@ -13,19 +13,6 @@
             ]
         }
     ],
-    "oauth2": {
-        "client_id": "91392419993-kmt8k8t1d6un5kba80ugi1jqum5uifjp.apps.googleusercontent.com",
-        "scopes": [
-            "profile email",
-            "https://www.googleapis.com/auth/calendar",
-            "https://www.googleapis.com/auth/calendar.readonly"
-        ]
-    },
-    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-    "permissions": [
-        "identity",
-        "identity.email"
-    ],
     "browser_action": {
         "default_popup": "popup.html",
         "default_title": "Test!"
