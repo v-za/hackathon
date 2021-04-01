@@ -51,14 +51,13 @@ data["items"].forEach( event => {
 
 
 
-
 const todayDay = (new Date())
 const today = todayDay.toDateString();
 const time = todayDay.toTimeString().slice(0,5);
 console.log(time)
 console.log(today)
-//console.log(days[today])
-days[today]["08:59"] = "HELLO I AM THE OBJECT!";
+console.log(days[today])
+days[today]["09:14"] = "HELLO I AM THE OBJECT!";
 
 function checkingTime () {
   setInterval(()=>{
@@ -72,11 +71,12 @@ function checkingTime () {
     if(days[today][time]){
     // console.log("hooray!");
     // console.log(days[today][time]);
-    let begin = document.getElementById('start');
-    let newChild = document.createElement('p');
-    newChild.innerHTML = "IS THIS WORKING??"
-    begin.appendChild(newChild);
-    if(days[today][time][link]){
+    // let begin = document.getElementById('start');
+    // let newChild = document.createElement('p');
+    // newChild.innerHTML = "IS THIS WORKING??"
+    // begin.appendChild(newChild);
+
+    if(typeof days[today][time] === 'object'){
       alert(days[today][time][link])
     }
     else {
@@ -84,7 +84,7 @@ function checkingTime () {
     }
     
     }
-  }, 60000)
+  }, 20000)
 }
 
 checkingTime();
