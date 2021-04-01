@@ -55,7 +55,7 @@ const time = todayDay.toTimeString().slice(0,5);
 console.log(time)
 console.log(today)
 //console.log(days[today])
-days[today]["08:10"] = "HELLO I AM THE OBJECT!";
+days[today]["08:13"] = "HELLO I AM THE OBJECT!";
 
 function checkingTime () {
   setInterval(()=>{
